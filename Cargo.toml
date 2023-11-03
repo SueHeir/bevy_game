@@ -1,0 +1,24 @@
+[package]
+name = "bevy_game"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "client"
+path = "src/client/main.rs"
+
+[[bin]]
+name = "server"
+path = "src/server/main.rs"
+
+[lib]
+path = "src/shared/lib.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = "*"
+bevy = "*"
+bevy_xpbd_2d = "*"
+bevy_replicon = "*"
+bevy_timewarp = { git = "https://github.com/RJ/bevy_timewarp" }
